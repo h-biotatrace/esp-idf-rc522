@@ -13,7 +13,6 @@ idf_component_register(
         src/rc522_driver.c
         src/driver/rc522_spi.c
         src/driver/rc522_i2c.c
-        src/driver/rc522_i2c_new.c
     REQUIRES
         esp_event
         esp_driver_spi
