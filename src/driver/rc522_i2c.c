@@ -23,7 +23,7 @@ static esp_err_t rc522_i2c_install(const rc522_driver_handle_t driver)
     rc522_i2c_config_t *conf = (rc522_i2c_config_t *)(driver->config);
 
     if (conf->i2c_bus_handle == NULL) {
-        i2c_master_bus(&conf->i2c_bus_config, &conf->i2c_bus_handle);
+        return ESP_ERR_INVALID_ARG;
     }
 
     RC522_RETURN_ON_ERROR(i2c_master_bus_add_device(conf->i2c_bus_handle,
